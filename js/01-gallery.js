@@ -24,7 +24,7 @@ refs.gallery.addEventListener('click', onGalleryClick);
 
 function onGalleryClick(e) {
   e.preventDefault();
-  const isGalleryLink = e.target.classList.contains('gallery__item');
+  // const isGalleryLink = e.target.classList.contains('gallery__item');
   if (e.target === e.currentTarget) {
     return 
   }
