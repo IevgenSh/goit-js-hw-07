@@ -19,20 +19,28 @@ const galleryItemsString = galleryItems
   .join("");
 refs.gallery.insertAdjacentHTML("beforeend", galleryItemsString);
 
+refs.gallery.addEventListener('click', onGalleryClick);
+
+
 function onGalleryClick(e) {
   e.preventDefault();
+  const isGalleryLink = e.target.classList.contains('gallery__item');
+  if (e.target === e.currentTarget) {
+    return 
+  }
   refs.image.src = e.target.dataset.source;
   instance.show();
-  
+  refs.gallery.addEventListener('keydown', onGalleryEscClick);
 }
 
 function onGalleryEscClick(e) {
   if (e.keyCode === 27) {
-    instance.close()
+    instance.close();
+    refs.gallery.removeEventListener('keydown', onGalleryEscClick);
   }
+  // console.log(e.key)
 }
 
-refs.gallery.addEventListener('click', onGalleryClick);
-refs.gallery.addEventListener('keydown', onGalleryEscClick);
+
 
 
