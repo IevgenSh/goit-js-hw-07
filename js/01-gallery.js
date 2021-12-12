@@ -37,8 +37,9 @@ function onGalleryEscClick(e) {
   if (e.keyCode === 27) {
     instance.close();
     refs.gallery.removeEventListener('keydown', onGalleryEscClick);
+    // console.log(e.key)
   }
-  // console.log(e.key)
+  return
 }
 
 
