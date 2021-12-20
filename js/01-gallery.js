@@ -39,9 +39,8 @@ function onGalleryEscClick(e) {
     refs.gallery.removeEventListener('keydown', onGalleryEscClick);
     // console.log(e.key)
   }
+  // console.log(e.key)
   return
 }
-
-
 
 
